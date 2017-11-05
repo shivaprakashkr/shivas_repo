@@ -1,0 +1,1 @@
+cmd_/home/shiva/excercise/driver/keydri.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-3.13.0-110-generic/scripts/module-common.lds --build-id  -o /home/shiva/excercise/driver/keydri.ko /home/shiva/excercise/driver/keydri.o /home/shiva/excercise/driver/keydri.mod.o
