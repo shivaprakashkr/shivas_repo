@@ -6,6 +6,15 @@ class interface
 	public:
 		virtual void abc () = 0;
 };
+
+class test : public interface
+{
+  public:
+  void abc()
+  {
+    cout << "Abc test interface\n";
+  }
+};
 class base :public interface
 {
 	int a;
@@ -15,6 +24,7 @@ class base :public interface
 			cout << "AATGC\n";
 		}
 };
+
 
 class other 
 {
@@ -29,10 +39,24 @@ public:
 
 int main ()
 {
+	base ba;
+	interface *in;
+	in = &ba;
+	in->abc();
+
+	test t1;
+	in = &t1;
+	in->abc ();
+#if 0
 	base *b = new base();
 	b->abc();
+
+	test t;
+
+	t.abc();
 		
 	other oth;
 	oth.print ();
+#endif
 	return 0;
 }
